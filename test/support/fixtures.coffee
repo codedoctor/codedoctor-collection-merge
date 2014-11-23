@@ -10,6 +10,9 @@ module.exports =
       ,
         v1 : 'value3left'
         k1 : 'key3'
+      ,
+        v1 : 'value5left'
+        k1 : null
     ]
 
 
@@ -22,5 +25,8 @@ module.exports =
       ,
         v2 : 'value4right'
         k1 : 'key4'
+      ,
+        v2 : 'value6right'
+        k1 : null
     ]
 

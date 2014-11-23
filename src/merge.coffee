@@ -14,19 +14,18 @@ module.exports = merge = (sourceA = [],sourceB = [],keyAPropertyName,keyBPropert
     cloneA = _.clone a
     results.push cloneA
 
-    key = a[keyAPropertyName].toString()
+    key = a[keyAPropertyName]?.toString()
 
-    helper[key] = cloneA
+    helper[key] = cloneA if key
 
   for b in sourceB
 
-    key = b[keyBPropertyName].toString()
+    key = b[keyBPropertyName]?.toString()
 
-    cloneA = helper[key]
-
-
-    if cloneA
-      _.extend cloneA, _.omit(b, keyBPropertyName)
-      cloneA[key2RenameTo] = b[keyBPropertyName]
+    if key
+      cloneA = helper[key]
+      if cloneA
+        _.extend cloneA, _.omit(b, keyBPropertyName)
+        cloneA[key2RenameTo] = b[keyBPropertyName]
 
   results

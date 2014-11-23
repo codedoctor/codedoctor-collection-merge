@@ -1,28 +1,20 @@
 url = require 'url'
 
 module.exports =
-  urlWithQS: -> url.parse "http://www.hello.com:8012/my/rest?a=12&b=ss"
-
-
-  resultData20request0offset0total: ->
-    items: []
-    requestCount: 20
-    requestOffset: 0
-    totalCount: 0
-  resultData20request0offset1total: ->
-    items: [
-      'a'
+  leftFileA = [
+        v1 : 'value1left'
+        k1 : 'key1'
+      ,
+        v1 : 'value2left'
+        k1 : 'key2'
     ]
-    requestCount: 20
-    requestOffset: 0
-    totalCount: 1
 
-  resultData20request60offset205total: ->
-    items: [
-      'a','b','c','d','e','f','g','h','l','m'
-      'a','b','c','d','e','f','g','h','l','m'
+
+  rightFileA = [
+        v2 : 'value1right'
+        k1 : 'key1'
+      ,
+        v2 : 'value2right'
+        k1 : 'key2'
     ]
-    requestCount: 20
-    requestOffset: 60
-    totalCount: 205
 
